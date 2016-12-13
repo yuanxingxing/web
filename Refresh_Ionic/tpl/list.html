@@ -1,0 +1,17 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+
+<ion-content class="has-header has-footer content main_box">
+  <div class="list">
+    <a class="item item-avatar" href="#/detail"
+      ng-repeat="product in productData">
+      <img ng-src="{{product.pic}}">
+      <h2>{{product.title1}}</h2>
+      <p>{{product.title2}}</p>
+      <p>{{product.price}}</p>
+    </a>
+  </div>
+
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

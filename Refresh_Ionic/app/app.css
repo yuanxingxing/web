@@ -1,0 +1,64 @@
+/*轮播的样式*/
+.main_box .slider-slides img{
+   max-width:100%;
+}
+.main_box .slider-pager{
+  z-index:100;
+}
+.main_box .slider-pager .slider-pager-page{
+  color: #ffa500;
+}
+.main_box .slider-slides .item{
+  background-color: #ccc;
+  margin:0;
+}
+/*首页的其他样式*/
+.main_box .card{
+  margin:10px 5px;
+}
+.main_box .card .item{
+  padding:5px;
+}
+.main_box .row{
+  margin:0;
+  padding:0;
+}
+.main_box .row .col img{
+  max-width:100%;
+}
+/*首页上新闻的样式*/
+.main_box .card .list .item span{
+  font-size: 12px;
+  color: #999;
+  width: 80px;
+  float: right;
+}
+.main_box .card .list .item a{
+  color: #555;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/*定义弹框的样式*/
+.modal{
+  width:60%;
+  min-height:80%;
+}
+.search_box{
+  background-color: #444;
+  width:60%;
+  height:80%;
+  position:fixed;
+  padding:10px;
+  box-shadow:20px 10px 40px #666;
+}
+.slide-in-right{
+  left:40%;
+  transition:all linear 1000ms;
+}
+.slide-in-right.ng-enter{left:100%;}
+.slide-in-right.ng-enter-active{left:40%;}
+.slide-in-right.ng-leave-active{left:100%;}
+
+
+

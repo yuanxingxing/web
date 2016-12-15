@@ -1,9 +1,6 @@
-/**
- * Created by bjwsl-001 on 2016/12/6.
- */
 angular.module('refreshApp',['ionic'])
   .config(function($stateProvider,$urlRouterProvider){
-    $urlRouterProvider.otherwise('main');
+    $urlRouterProvider.otherwise('start');
     $stateProvider
       .state('main',{
           url:'/main',
@@ -25,6 +22,11 @@ angular.module('refreshApp',['ionic'])
         templateUrl:'tpl/start.html',
         controller:'startCtrl'
       })
+      .state('search',{
+        url:'/search',
+        templateUrl:'tpl/search.html',
+        controller:'searchCtrl'
+      })
   })
   .controller('parentCtrl',function($scope,$ionicModal,$state){
     //定义弹框
@@ -36,14 +38,18 @@ angular.module('refreshApp',['ionic'])
     });
 
     //实现弹出
-    $scope.search = function(){
-      $scope.modal.show();
-    };
+    //$scope.search = function(){
+    //  $scope.modal.show();
+    //};
 
     //实现跳转的方法
     $scope.jump = function(pageUrl){
       $state.go(pageUrl);
     }
+    $scope.goHistory = function(page){
+      history.go(page);
+    }
+
   })
   .controller('mainCtrl',function($scope,$http,$timeout){
     //定义轮播的图片
@@ -65,7 +71,7 @@ angular.module('refreshApp',['ionic'])
         $http.get('data/news.php?pageNum='+$scope.pageNum)
           .success(function(result){
             if(result.data.length < 5)
-              $scope.hasMore = false
+              $scope.hasMore = false;
             $scope.newsData = $scope.newsData.concat(result.data);
             $scope.pageNum++;
             $scope.$broadcast('scroll.infiniteScrollComplete');
@@ -83,14 +89,20 @@ angular.module('refreshApp',['ionic'])
   .controller('detailCtrl',function(){
 
   })
+  .controller('searchCtrl',function(){
+
+  })
+
   .controller('startCtrl',function($scope,$timeout,$state,$interval){
       $scope.seconds = 5;
       $timeout(function(){
         $state.go('main');
-      },5000);
+      },10000);
 
       $interval(function(){
         if($scope.seconds > 0)
             $scope.seconds--;
       },1000);
+      /**/
+
   })

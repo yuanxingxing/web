@@ -104,21 +104,23 @@
   color: #fff;
 }
 /*产品*/
-.main_product .list h2,.main_product .list p{
-    margin: 15px 0 10px 100px;
+.main_product .list h2{
+    margin: 15px 0 5px 100px;
+  font-size: 12px;
 }
 .main_product .list p{
+  margin: 0 0 0 100px;
   color:#B4AFAF;
+  font-size: 11px;
 }
 .main_product .list a button{
-  font-size: 13px;
+  font-size: 12px;
   color: #fff;
   background: #EA3D64;
   opacity: 0.8;
-  width: 80px;
   margin-top: 55px;
-  min-height: 25px;
-  line-height: 25px;
+  min-height: 20px;
+  line-height: 20px;
 }
-
-
+/*注册验证信息*/
+.alert_msg{}

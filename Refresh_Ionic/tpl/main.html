@@ -7,15 +7,15 @@
     auto-play="true" slide-interval="3000"
     does-continue="true"
     page-shower="true">
-    <ion-slide class="item" ng-repeat="img in imageArray">
+    <ion-slide  ng-repeat="img in imageArray">
       <img ng-src="{{img}}" alt=""/>
     </ion-slide>
   </ion-slide-box>
 
   <!--三个图片-->
   <div class="card">
-    <div class="item item-divider">
-      <a class="button icon-left ion-star button-clear button-dark">净美仕产品</a>
+    <div class="item item-divider main_title">
+      <a href="#/list">优惠来袭</a>
     </div>
     <div class="item item-text-wrap">
       <div class="row">
@@ -27,20 +27,45 @@
   </div>
 
   <!--关于-->
-  <div class="card">
-    <div class="item item-divider">
-      <a class="button icon-left ion-star button-clear button-dark">关于净美仕</a>
+  <div class="card main_product">
+    <div class="item item-divider main_title">
+      <a href="#/about">人气宝贝</a>
     </div>
     <div class="item item-text-wrap">
-      <p>北京净美仕环境科技有限公司自诞生起一直关注人类呼吸健康的问题，并专注于室内空气质量的研究与改善。2003年，非典来袭，环境安全威胁到了每个人的生命，全国陷入一片恐慌。净美仕肩负着为人类创造健康安全生活环境的使命应运而生。2012年7月，亿朗以“净美仕(Mfresh)”为品牌重塑，以崭新的面貌屹立在净化行业。 <a
-        href="#">查看更多</a></p>
+      <div class="list">
+        <a class="item item-thumbnail-left item-button-right" href="#/list">
+          <img src="images/p1.jpg">
+          <h2>大黄蜂德国进口车载儿童安全座椅</h2>
+          <p>德国百年品牌 旗舰品质保障 紫色预售 银色预售</p>
+          <button class="button">查看详情</button>
+        </a>
+
+        <a class="item item-thumbnail-left item-button-right" href="#/list">
+          <img src="images/p2.jpg">
+          <h2>韩国帕克伦宝宝爬行垫加厚婴儿环保泡沫地垫</h2>
+          <p>3C认证 进口报关单 安全无毒 不添加发泡剂</p>
+          <button class="button">查看详情</button>
+        </a>
+        <a class="item item-thumbnail-left item-button-right" href="#/list">
+          <img src="images/p3.png">
+          <h2>爱因美ppsu奶瓶婴儿奶瓶宽口径带吸管</h2>
+          <p>买一赠三 PPSU材质 轻盈耐摔 经典瓶型</p>
+          <button class="button">查看详情</button>
+        </a>
+        <a class="item item-thumbnail-left item-button-right" href="#/list">
+          <img src="images/p4.jpg">
+          <h2>澳洲可瑞康羊奶粉3段新西兰进口奶粉</h2>
+          <p>贴近母乳 易吸收 3罐立减30</p>
+          <button class="button">查看详情</button>
+        </a>
+      </div>
     </div>
   </div>
 
   <!--新闻-->
   <div class="card">
-    <div class="item item-divider">
-      <a class="button icon-left ion-star button-clear button-dark">最新动态</a>
+    <div class="item item-divider main_title">
+      <a href="#/news">最新动态</a>
     </div>
     <div class="item item-text-wrap">
       <ul class="list">
